@@ -9,8 +9,16 @@ class Hangman:
         if guess not in self.keyword:
             self.bad_guess.append(guess)
         else:
-            x = self.keyword.index(guess)
-            self.display[x] = guess
+            i = 0
+            while(i != len(self.keyword)):
+                try:
+                    x = self.keyword[i:].index(guess) #index value where the letter is found
+                except ValueError:
+                    break
+                print(self.keyword[i:])
+                self.display[x+(len(self.keyword)-len(self.keyword[i:]))] = guess #compensates for shift in indices values for keyword versus keyword[i:]
+                print("value change")
+                i+=1
     def print_guy(self):
         print(self.guy)
     def print_bad_guess(self):
