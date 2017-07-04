@@ -7,3 +7,6 @@ while(keep_going):
     h.take_guess(user_guess)
     print(" ".join(h.display))
     print("Incorrect: " + ", ".join(h.bad_guess))
+    if(h.display == h.keyword):
+        print("Congratulations! You win!")
+        keep_going = False
