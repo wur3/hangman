@@ -9,7 +9,7 @@ while(keep_going):
     while(user_guess in h.bad_guess or user_guess in h.good_guess):#no repeats
         user_guess = input("Guess a different letter: ")
     h.take_guess(user_guess)
-    print(h.guy + "\n")
+    h.print_guy()
     if(h.strikes >= 6):
         print("GAME OVER! He got hung.")
         keep_going = False

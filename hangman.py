@@ -1,5 +1,13 @@
 class Hangman:
-    guy = "  _______\n |/      |\n |      (_)\n |      \|/\n |       |\n |      / \\\n |\n_|___"
+    guy = []
+    guy.append("  _______\n |/      |\n |         \n |      \\|/\n |       |\n |      / \\\n |\n_|___") #empty
+    guy.append("  _______\n |/      |\n |      (_)\n |         \n |        \n |          \n |\n_|___") #head
+    guy.append("  _______\n |/      |\n |      (_)\n |       | \n |       |\n |          \n |\n_|___") #body
+    guy.append("  _______\n |/      |\n |      (_)\n |      \\| \n |       |\n |          \n |\n_|___") #left-arm
+    guy.append("  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |          \n |\n_|___") #right-arm
+    guy.append("  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |      /   \n |\n_|___") #left-leg
+    guy.append("  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |      / \\\n |\n_|___") #left-leg
+    guy.append("  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |      / \\\n |\n_|___") #full
     bad_guess = [] #list of wrongly-guessed letters
     good_guess = [] #sublist of keyword, used to check for repeats
     strikes = 0 #at 6 strikes, the hangman is completed and the game ends
@@ -21,6 +29,6 @@ class Hangman:
                 self.display[x+(len(self.keyword)-len(self.keyword[i:]))] = guess #compensates for shift in indices values for keyword versus keyword[i:]
                 i+=1
     def print_guy(self):
-        print(self.guy)
+        print(self.guy[self.strikes])
     def print_bad_guess(self):
         print(self.bad_guess)
