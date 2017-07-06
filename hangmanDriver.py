@@ -1,6 +1,9 @@
 from hangman import Hangman
 
-h = Hangman("cherry")
+input_file = open('./input.txt')
+the_word = input_file.read()
+input_file.close()
+h = Hangman(the_word)
 turn = 1
 keep_going = True
 while(keep_going):
