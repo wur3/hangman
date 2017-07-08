@@ -1,4 +1,4 @@
-#hangman
+# hangman
 Simulates the classic game "Hangman" using CLI with Python.<br />
 <br />
 First, you need to enter the keyword that other people try to guess. However, because using 'input()' would leave the word on the CLI to easily be read, hangmanDriver.py takes the word in the file "input.txt". "input.txt" MUST contain one word only.<br />
