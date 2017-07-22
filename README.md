@@ -1,5 +1,5 @@
 # hangman
-Simulates the classic game "Hangman" on the command line with Python.<br />
+Simulates the classic game "Hangman" on the command line.<br />
 <br />
 First, you entire one word into "input.txt." As an example, "input.txt" has the word "alligator." The program will produce gallows as well as the word blanked out. For example, "alligator" would show:<br />
 <br />
