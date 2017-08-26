@@ -1,6 +1,6 @@
 class Hangman:
     guy = []
-    guy.append("  _______\n |/      |\n |         \n |      \\|/\n |       |\n |      / \\\n |\n_|___") #empty
+    guy.append("  _______\n |/      |\n |         \n |      \n |       \n |      \n |\n_|___") #empty
     guy.append("  _______\n |/      |\n |      (_)\n |         \n |        \n |          \n |\n_|___") #head
     guy.append("  _______\n |/      |\n |      (_)\n |       | \n |       |\n |          \n |\n_|___") #body
     guy.append("  _______\n |/      |\n |      (_)\n |      \\| \n |       |\n |          \n |\n_|___") #left-arm
@@ -23,12 +23,12 @@ class Hangman:
             i = 0
             while(i != len(self.keyword)):
                 try:
-                    x = self.keyword[i:].index(guess) #index value where the letter is found
+                    x = self.keyword[i:].index(guess) #index value where 'guess' is found in 'keyword'
                 except ValueError:
                     break
                 self.display[x+(len(self.keyword)-len(self.keyword[i:]))] = guess #compensates for shift in indices values for keyword versus keyword[i:]
                 i+=1
-    def print_guy(self):
+    def print_guy(self): #print hangman guy
         print(self.guy[self.strikes])
-    def print_bad_guess(self):
+    def print_bad_guess(self): #print list of wrong guesses
         print(self.bad_guess)
