@@ -1,5 +1,6 @@
 # hangman
 Simulates the classic game "Hangman" on the command line.<br />
+Reads word from input file, repeatedly takes guesses from user, and draws hangman that updates based on number of wrong guesses<br />
 <br />
 First, you enter one word into "input.txt." As an example, "input.txt" has the word "alligator." The program will display gallows followed by blanks to show how many letters in the word. For example, "alligator" would show:<br />
 <br />
