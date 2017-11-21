@@ -1,7 +1,7 @@
 from hangman import Hangman
 
 input_file = open('./input.txt')
-the_word = input_file.read()
+the_word = input_file.readline().strip()
 input_file.close()
 h = Hangman(the_word)
 turn = 1
