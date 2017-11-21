@@ -13,7 +13,12 @@ class Hangman:
     strikes = 0 #at 6 strikes, the hangman is completed and the game ends
     def __init__(self, word):
         self.keyword = list(word) #list that stores the word that is being guessed
-        self.display = list('_' * len(word)) #list that starts out as the number-of-letters-in-the-word amount of blank lines e.g. 'cat' -> ['_', '_', '_']
+        self.display = [];
+        for i in range(0,len(word)):
+            if(self.keyword[i]!=' '):
+                self.display.append('_');
+            else:
+                self.display.append(' ');
     def take_guess(self, guess):
         if guess not in self.keyword:
             self.bad_guess.append(guess)
