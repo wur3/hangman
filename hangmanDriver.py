@@ -1,5 +1,7 @@
 from hangman import Hangman
+import os
 
+size = os.path.getsize('./input.txt')
 input_file = open('./input.txt')
 for line in input_file:
     the_word = line.strip()
@@ -25,6 +27,9 @@ for line in input_file:
             user_guess = input("Guess a different letter: ")
         h.take_guess(user_guess)
         turn += 1
+    size =- len(line)
+    if not size:
+        break
     nextGame = input("Want to play another round?(y/n)")
     while nextGame.lower() != "yes" and nextGame.lower() != "no" \
             and nextGame.lower() != "y" and nextGame.lower() != "n":
@@ -33,4 +38,5 @@ for line in input_file:
         continue
     elif nextGame.lower() == "no" or nextGame.lower() == "n":
         break
+print("Thanks for playing!")
 input_file.close()
